@@ -9,17 +9,18 @@ const App = () => {
   const [maskImage, setMaskImage] = useState(null);
   // console.log(maskImage, "state response")
 
+  const API_BASE_URL = "https://image-editor-backend-4wgb.onrender.com";
   const handleImageUpload = async (image) => {
     try {
       const formData = new FormData();
       const blob = await fetch(image).then((res) => res.blob());
       formData.append("file", blob, "original.png");
 
-      const response = await axios.post("http://127.0.0.1:8000/upload/", formData, {
+      const response = await axios.post(`${API_BASE_URL}/upload/`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
-      setUploadedImage(`http://127.0.0.1:8000${response.data.file_url}`);
+      setUploadedImage(`${API_BASE_URL}${response.data.file_url}`);
     } catch (error) {
       console.error("Error uploading image:", error);
     }
@@ -31,11 +32,11 @@ const App = () => {
       const blob = await fetch(mask).then((res) => res.blob());
       formData.append("file", blob, "mask.png");
 
-      const response = await axios.post("http://127.0.0.1:8000/upload/", formData, {
+      const response = await axios.post(`${API_BASE_URL}/upload/`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       console.log(response.data.file_url, "post response check")
-      const maskUrl = `http://127.0.0.1:8000${response.data.file_url}`;
+      const maskUrl = `${API_BASE_URL}${response.data.file_url}`;
       // const maskUrl = response.data.file_url
       console.log("Mask Image URL:", maskUrl);
       setMaskImage(maskUrl);

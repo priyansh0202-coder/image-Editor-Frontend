@@ -5,7 +5,10 @@ This is a full-stack application that allows users to upload images, draw on the
 ## Features
 - Upload and display images.
 - Draw on the image using customizable brush settings.
-- Export the drawn mask as an image.
+- Export and display the original image and the mask image as a pair.
+- Allow users to upload an image (JPEG/PNG format).
+- Allow users to increase or decrease the brush size.
+- Original image and the generated mask image side-by-side below the canvas.
 
 ## Live Demo
 Live-link - https://image-editor-frontend.vercel.app/

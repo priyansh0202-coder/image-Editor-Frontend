@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import CanvasDraw from "react-canvas-draw";
 
-const Canvas = ({ uploadedImage, onExport }) => {
+const CanvasComponent = ({ uploadedImage, onExport }) => {
     const canvasRef = useRef();
     const [brushRadius, setBrushRadius] = useState(10);
 
@@ -57,5 +57,5 @@ const Canvas = ({ uploadedImage, onExport }) => {
     );
 };
 
-export default Canvas;
+export default CanvasComponent;
 

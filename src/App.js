@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ImageUpload from "./components/ImageUpload";
-import Canvas from "./components/Canvas";
+import Canvas from "./components/CanvasComponent";
 import axios from "axios";
 import "./style.css";
 
@@ -72,3 +72,5 @@ const App = () => {
 };
 
 export default App;
+
+

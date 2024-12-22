@@ -68,7 +68,6 @@ canvas {
     overflow: hidden;
     width: 500px;
     height: 500px;
-    /* border: 2px solid #4CAF50; */
     border-radius: 10px;
 }
 
@@ -89,7 +88,6 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .app {
         margin: 15px;
